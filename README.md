@@ -1,4 +1,4 @@
-<h1>Versão 2 do Projeto Person API</h1>
+<h1 align="center">Versão 2 do Projeto Person API</h1>
 
 ---
 <H3>Objetivo: </H3>
@@ -54,13 +54,26 @@ public interface IAlunoRepository extends JpaRepository<Aluno,Integer> {
 Podendo assim ser criados todas as Entidades, Serviços e Controllers do projeto, gerando assim banco relational 1xN conforme imagem:
 <b>Tabela Aluno</b>
 
-![image](https://prnt.sc/1goah4g)
+![image](images/banco1.png)
 
 <b>Tabela Materias</b>
 
-![image](https://prnt.sc/1gob4rd)
+![image](images/banco2.png)
 
 <b>Tabela Aluno-Materia</b>
 
-![image](https://prnt.sc/1gob4rd)
+![image](images/banco3.png)
 
+Após a confirmação de que o banco subiu corretamente e o JPA está conseguindo criar ele, podemos então seguir para a criação das demais classes:
+
+- Enums;
+- Exceptions
+
+A Estrutura Final do Projeto Ficou conforme abaixo:
+
+![image](images/Estrutura.png)
+
+---
+<H2>Conclusão</h2>
+<p>Ao final deste projeto, foi aprendido e colocado em pratica conceitos Rest, as principais annotations (@GetMapping, @PostMapping, @PutMapping e @DeleteMapping).
+Fora isso foi reduzido algumas redundancias do projeto original, gerando assim um código mais <i>'clean'</i> e de facil manutenção.</p>
