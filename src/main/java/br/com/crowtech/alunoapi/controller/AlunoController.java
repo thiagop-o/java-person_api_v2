@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.SQLOutput;
 import java.util.List;
 
 @RestController
@@ -37,6 +38,15 @@ public class AlunoController {
     @PutMapping("/{id}")
     public Aluno updateAluno(@RequestBody Aluno aluno){
         return alunoservice.updateAluno(aluno);
+    }
+    @DeleteMapping("/{id}")
+    public ResponseEntity deleteAlunoById(@PathVariable("id") Integer id) throws Exception{
+        try{
+            alunoservice.deleteAluno(id);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        return ResponseEntity.noContent().build();
     }
 
 }

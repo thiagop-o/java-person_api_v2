@@ -34,4 +34,8 @@ public class Alunoservice {
     public Aluno updateAluno(Aluno aluno){
         return iAlunoRepository.save(aluno);
     }
+
+    public void deleteAluno(Integer id){
+        iAlunoRepository.deleteById(id);
+    }
 }
