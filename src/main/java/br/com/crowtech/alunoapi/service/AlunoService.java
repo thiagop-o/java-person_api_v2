@@ -11,11 +11,11 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class Alunoservice {
+public class AlunoService {
     IAlunoRepository iAlunoRepository;
 
     @Autowired
-    public Alunoservice (IAlunoRepository iAlunoRepository){
+    public AlunoService(IAlunoRepository iAlunoRepository){
         this.iAlunoRepository = iAlunoRepository;
     }
 
