@@ -1,6 +1,8 @@
 package br.com.crowtech.alunoapi.service;
 
 import br.com.crowtech.alunoapi.entity.Aluno;
+import br.com.crowtech.alunoapi.exceptions.AlunoNotFoundException;
+import br.com.crowtech.alunoapi.exceptions.MessageResponse;
 import br.com.crowtech.alunoapi.repositories.IAlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,5 +29,9 @@ public class Alunoservice {
 
     public Optional<Aluno> getById(Integer id){
         return iAlunoRepository.findById(id);
+    }
+
+    public Aluno updateAluno(Aluno aluno){
+        return iAlunoRepository.save(aluno);
     }
 }

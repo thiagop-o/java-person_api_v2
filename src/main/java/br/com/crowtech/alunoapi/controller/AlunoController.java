@@ -34,5 +34,9 @@ public class AlunoController {
         return ResponseEntity.ok(alunoservice.getById(id).orElseThrow(() ->
             new AlunoNotFoundException("Aluno de ID: "+ id + " Não Encontrado")));
     }
+    @PutMapping("/{id}")
+    public Aluno updateAluno(@RequestBody Aluno aluno){
+        return alunoservice.updateAluno(aluno);
+    }
 
 }
